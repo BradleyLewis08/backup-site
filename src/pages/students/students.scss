@@ -1,0 +1,310 @@
+@import "../../styles/variables";
+
+.students-container {
+    .header-container {
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        .header-content-container {
+            width: 50%;
+        }
+        img {
+            width: auto;
+            height: 90%;
+        }
+    }
+
+    .sub-header-container {
+        margin-top: 0;
+        margin-bottom: 14vh;
+
+        .regular-button {
+            font-weight: 700;
+            @media screen and (max-width: 768px) {
+                font-size: $small-font-size;
+            }
+        }
+
+        .desc-block h2 {
+            margin-top: 0;
+        }
+        
+        .catalog-application-info {
+            margin-top: 12px;
+            .regular-button {
+                margin: 0 4px;
+                height: 36px;
+                padding: 0px 16px;
+                @media screen and (max-width: 768px) {
+                    height: 28px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    .apps-title {
+        font-size: 24px;
+        font-weight: 700;
+        @media screen and (max-width: 568px) {
+            font-size: 18px;
+        }
+    }
+
+    .statistics-search-container::before {
+        width: 0;
+        height: 0;
+        border-bottom: 60px solid $darker-blue-color;
+        border-right: 100vw solid transparent;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        content: "";
+    }
+
+    .statistics-search-container::after {
+        width: 0;
+        height: 0;
+        border-top: 60px solid $darker-blue-color;
+        border-left: 100vw solid transparent;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content: "";
+    }
+
+    .statistics-search-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 0 10px 0;
+        margin-bottom: 90px;
+
+        .industry-search-bar-container {
+            width: 40%;
+            margin: 0;
+        }
+
+        .industry-search-input {
+            border: 1px solid white;
+        }
+
+        .icon-container {
+            background-color: $blue-color;
+        }
+    }
+
+    .meet-the-interns-header-container {
+        height: auto;
+        width: 70%;
+        margin-top: 14vw;
+        position: relative;
+
+        .title {
+            font-size: 4vw;
+            position: absolute;
+            top: -110px;
+            right: 0;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .meet-the-interns-container::before {
+        width: 0;
+        height: 0;
+        border-bottom: 60px solid #f6f9fb;
+        border-left: 100vw solid transparent;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        content: "";
+    }
+
+    .meet-the-interns-container::after {
+        width: 0;
+        height: 0;
+        border-top: 60px solid #f6f9fb;
+        border-right: 100vw solid transparent;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content: "";
+    }
+
+    .meet-the-interns-container {
+        display: flex;
+        justify-content: center;
+        background-color: #f6f9fb;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-top: 100px;
+        padding: 100px 0;
+
+        .intern-profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            margin: 40px 0;
+        }
+
+        .images-container {
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            img {
+                width: inherit;
+                height: auto;
+                max-height: 220px;
+                object-fit: cover;
+                border-radius: 20px;
+                object-position: 0 0;
+            }
+
+            .company-logo {
+                margin-top: 12px;
+                width: 100px;
+            }
+        }
+
+        .desc-container {
+            .intern-name {
+                font-size: 32px;
+                margin-top: 0;
+            }
+            .intern-school {
+                font-size: 24px;
+            }
+            margin-left: 40px;
+        }
+    }
+
+    .content-container {
+        .info-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+
+            .about-img-container {
+                width: 200px;
+                margin-right: 40px;
+            }
+
+            .about-img {
+                max-width: 100%;
+            }
+
+            .info-container-desc {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0;
+
+                h2 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .header-container {
+            display: block;
+            height: unset;
+            .header-content-container {
+                width: 100%;
+            }
+            img {
+                display: none;
+            }
+            .catalog-button {
+                font-size: 16px;
+            }
+        }
+        .meet-the-interns-header-container {
+            width: 100%;
+            margin-top: 100px;
+            .title {
+                font-size: 4vw;
+                position: absolute;
+                top: -50px;
+                right: 40px;
+            }
+        }
+        .meet-the-interns-container {
+            .intern-profile-container {
+                display: block;
+                .images-container {
+                    margin: 0 auto;
+                }
+            }
+            .desc-container {
+                margin-left: 0;
+                margin-top: 40px;
+                .intern-name {
+                    font-size: 22px;
+                    margin-top: 0;
+                }
+                .intern-school {
+                    font-size: $small-font-size;
+                }
+                p {
+                    font-size: $small-font-size;
+                }
+            }
+        }
+        .content-container .info-container {
+            h2 {
+                font-size: 22px;
+            }
+            .about-img-container {
+                display: none;
+            }
+            p {
+                font-size: $small-font-size;
+            }
+        }
+    }
+    // added
+    .student-testimonial-container {
+        width: 100% !important;
+
+        .title {
+            margin: 80px 0;
+        }
+
+        // bottom card for student testimonials
+        .bottom-card {
+            position: absolute;
+            border: $darker-blue-color 2px solid;
+            border-radius: 20px;
+            background-color: $darker-blue-color;
+            padding: 40px;
+            width: 935px;
+            height: 455px;
+            top: 2910px;
+            left: 280px;
+            z-index: -1;
+        }
+        .lined-rect {
+            position: absolute;
+            width: 935px;
+            height: 455px;
+            top: 2935px;
+            left: 310px;
+            z-index: -2;
+        }
+    }
+}

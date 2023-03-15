@@ -1,0 +1,223 @@
+@import "../../styles/variables";
+
+
+.about-container {
+    .header-container {
+        h3 {
+            font-size: 3vw;
+        }
+
+        .button-container {
+            display: block;
+        }
+    }
+    .header-container .desc-block {
+        float: left;
+        flex-direction: column;
+        margin-top: 14px;
+        padding: 24px;
+
+        a {
+            text-decoration: none;
+        }
+
+        .regular-button {
+            display: block;
+        }
+
+        a:first-child .regular-button {
+            margin-bottom: 16px;
+        }
+    }
+
+    .full-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        z-index: 2;
+
+        .images-parallax-container {
+            position: absolute;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .images-container {
+            overflow: hidden;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+
+            .images-center-container {
+                flex-shrink: 0;
+                width: 100%;
+                min-width: 1400px;
+                position: relative;
+            }
+
+            position: relative;
+            text-align: center;
+
+            img:first-child {
+                transform: rotate(180deg);
+                position: relative;
+                top: 100px;
+            }
+            img {
+                width: 100%;
+                min-width: 1400px;
+                height: auto;
+            }
+
+            .images-container-text {
+                position: absolute;
+                top: 50%;
+                color: white;
+                width: 40%;
+                margin: 0 30%;
+            }
+        }
+    }
+
+    .content-container {
+        width: 100%;
+        margin-top: 26vh;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .meetbutton {
+        color: #fff !important;
+        background: $blue-color;
+        border-radius: 25px;
+        border: none;
+        padding: 14px 22px 18px 22px;
+        font-size: $regular-font-size;
+        box-shadow: 5px 5px #77afec;
+        margin-top: 50px;
+    }
+
+    .internship-intro {
+        margin-top: 2%;
+        width: 55%;
+
+        p {
+            font-size: $regular-font-size;
+            margin: 0.8rem 0;
+        }
+
+        button a {
+            color: white;
+        }
+    }
+
+    .banner-content {
+        width: 80%;
+    }
+
+    .content-subcontainer {
+        width: 80%;
+        display: flex;
+
+        .subcontent {
+            display: flex;
+            flex-direction: row;
+            flex: 1 0 auto;
+            margin-top: 16%;
+        }
+
+        .content-title {
+            display: flex;
+            margin-top: 124px;
+            font-size: 30px;
+            color: #051b32;
+            height: 40px;
+            transform: rotate(-90deg);
+        }
+
+        .content-title::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 1px;
+            left: 120px;
+            top: 24px;
+            border: 2px $darker-blue-color solid;
+        }
+
+        .content-subtitle {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            padding-right: 60px;
+        }
+
+        h3 {
+            margin-left: 20px;
+            margin-top: 4px;
+            font-size: 3vw;
+        }
+
+        .desc-block {
+            display: flex;
+            flex-direction: column;
+            flex: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .header-container .desc-block {
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .full-container .images-container .images-container-text {
+            font-size: 32px;
+            width: 20%;
+            margin: 0 40%;
+        }
+
+        .internship-intro {
+            margin-top: 2%;
+            width: 80%;
+
+            p {
+                font-size: $small-font-size;
+            }
+        }
+
+        .content-subcontainer {
+            display: block;
+
+            .subcontent {
+                margin-top: 20%;
+            }
+
+            .content-title {
+                margin-top: 110px;
+            }
+
+            .content-subtitle {
+                padding-right: 0;
+
+                h3 {
+                    font-size: 22px;
+                    margin-left: 8px;
+                }
+            }
+
+            .desc-block {
+                p {
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+}

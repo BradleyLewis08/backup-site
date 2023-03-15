@@ -1,0 +1,174 @@
+@import "../../../../styles/variables";
+
+.card {
+    position: relative;
+    border: $darker-blue-color 2px solid;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: $main-background-color;
+}
+.card::after {
+    position: absolute;
+    content: "";
+    //border: $darker-blue-color 2px solid;
+    background-color: $darker-blue-color;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    top: 12px;
+    left: 12px;
+    z-index: -1;
+    transition: all 200ms;
+}
+
+.partner-testimonials-container .testimonial-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10;
+    flex-direction: row;
+
+    .testimonial {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px;
+        height: 72%;
+        flex-direction: row;
+
+        .founderSide {
+            text-align: center !important;
+            width: 30%;
+
+            .name {
+                font-size: 36px;
+                color: $blue-color;
+            }
+
+            .img {
+                width: 200px;
+                height: 200px;
+                margin-top: 10px;
+                object-fit: contain;
+            }
+            .bio {
+                text-align: center !important;
+                color: #636363;
+                font-size: 20px;
+            }
+        }
+
+        .rightSide {
+            width: 70%;
+
+            .blurb {
+                display: flex;
+                flex-direction: row;
+                
+                .text {
+                    font-size: 19px;
+                }
+    
+                img {
+                    margin: 20px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .rightQuote {
+                    align-self: flex-end;
+                    transform: rotate(180deg);
+                }
+            }
+            .heading {
+                color: $blue-color;
+                font-size: 28px;
+                text-align: center;
+                margin-top: 0px;
+            }
+            .interns {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-top: 15px;
+                
+                .intern {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .img {
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        align-self: center;
+                    }
+
+                    .name {
+                        color: #636363;
+                        margin-block-start: 5px;
+                        margin-block-end: 5px;
+                        font-size: 15px;
+
+                        .linkedin {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1060px) {
+            display: flex;
+            padding: 60px 8px;
+            flex-direction: column;
+
+            .founderSide {
+                width: unset;
+                .img {
+                    width: 120px;
+                    height: 120px;
+                }
+                .name {
+                    font-size: 20px;
+                }
+                .bio {
+                    margin-top: 4px;
+                    font-size: 16px;
+                }
+            }
+            
+            .rightSide {
+                width: unset;
+                .heading {
+                    font-size: 20px;
+                }
+                .blurb {                    
+                    .text {
+                        font-size: 14px;
+                    }
+        
+                    img {
+                        margin: 4px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+                .interns {
+                    display: block;
+                    .intern {
+                        .img {
+                            width: 30px;
+                            height: 30px;
+                        }
+    
+                        .name {
+                            font-size: 14px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
